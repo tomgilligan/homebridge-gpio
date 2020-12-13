@@ -44,16 +44,7 @@ export class GPIOPlatform implements DynamicPlatformPlugin {
     this.accessories.push(accessory);
   }
 
-  /**
-   * This is an example method showing how to register discovered accessories.
-   * Accessories must only be registered once, previously created accessories
-   * must not be registered again to prevent "duplicate UUID" errors.
-   */
   discoverDevices() {
-
-    // EXAMPLE ONLY
-    // A real plugin you would discover accessories from the local network, cloud services
-    // or a user-defined array in the platform config.
     const exampleDevices = [
       {
         exampleUniqueId: '/sys/class/gpio/gpio12',
