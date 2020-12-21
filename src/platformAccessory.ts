@@ -56,11 +56,13 @@ export class GPIOAccessory {
   setOn(value: CharacteristicValue, callback: CharacteristicSetCallback) {
 
     if (value) {
-      console.log(value);
-      fs.writeFile('/sys/class/gpio/gpio12/value', '1', (err) => {console.log(err);});
+      fs.writeFile('/sys/class/gpio/gpio12/value', '1', () => {
+        // do nothing
+      });
     } else {
-      console.log(value);
-      fs.writeFile('/sys/class/gpio/gpio12/value', '0', (err) => {console.log(err);});
+      fs.writeFile('/sys/class/gpio/gpio12/value', '0', () => {
+        // do nothing
+      });
     }
     // implement your own code to turn your device on/off
     this.exampleStates.On = value as boolean;
